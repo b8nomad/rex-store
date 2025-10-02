@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import APP_CONSTANTS from "@/app/constants/labels";
 
 type cartType = {
   id: number;
@@ -106,7 +107,7 @@ const page = () => {
               <h1>order total</h1>
               <h1>$0.0</h1>
             </div>
-            <Button>Proceed to Checkout</Button>
+            <Button>{APP_CONSTANTS.CHECKOUT_LABEL}</Button>
           </div>
         </div>
       </div>
