@@ -36,6 +36,101 @@ const FOOTER_LINKS = [
 ]
 const ADD_CART_LABEL = "add to cart";
 const CHECKOUT_LABEL = "proceed to checkout";
+const VIEW_PRODUCT_LABEL = "view product";
+
+
+ const category = [
+    {
+      id: 1,
+      name: "men",
+      description: "Explore our latest men's fashion collection.",
+      image_url:
+        "https://commerce.bagisto.com/cache/large/category/2/OYsuHioryn5KrOE7p8wQ2hQ3BReXY5CSbDzhvEk8.webp",
+  
+      },
+    {
+      id: 2,
+      name: "kids",
+      description: "Discover trendy and comfortable styles for kids.",
+      image_url:
+        "https://commerce.bagisto.com/cache/large/category/3/IZckbPVQSOboHJrXmguJnJA3jPCUD1GfjSZHgtB3.webp",
+    },
+    {
+      id: 3,
+      name: "women",
+      description: "Shop the newest arrivals in women's fashion.",
+      image_url:
+        "https://commerce.bagisto.com/cache/large/category/4/oT8LA8gG6K7UlBgzB3ZVOjczO3iKyRkrVLD6d1s9.webp",
+    },
+  ];
+    const products = [
+    {
+      id: 1,
+      name: "Shirt",
+      price: 29.99,
+      img_url:
+        "https://image.hm.com/assets/hm/52/2c/522c4003b164b188cc3268639d62078cc68790ff.jpg",
+      description: "A comfortable cotton shirt.",
+      category: "Clothing",
+      tags: ["new", "sale"],
+      stock: 100,
+    },
+    {
+      id: 2,
+      name: "Jeans",
+      price: 49.99,
+      img_url:
+        "https://image.hm.com/assets/hm/52/2c/522c4003b164b188cc3268639d62078cc68790ff.jpg",
+      description: "Stylish denim jeans.",
+      category: "Clothing",
+      tags: ["new", "sale"],
+      stock: 50,
+    },
+    {
+      id: 3,
+      name: "Sneakers",
+      price: 79.99,
+      img_url:
+        "https://image.hm.com/assets/hm/52/2c/522c4003b164b188cc3268639d62078cc68790ff.jpg",
+      description: "Comfortable sneakers for everyday wear.",
+      category: "Footwear",
+      tags: ["new", "sale"],
+      stock: 30,
+    },
+    {
+      id: 4,
+      name: "Jacket",
+      price: 99.99,
+      img_url:
+        "https://image.hm.com/assets/hm/52/2c/522c4003b164b188cc3268639d62078cc68790ff.jpg",
+      description: "A warm and stylish jacket.",
+      category: "Clothing",
+      tags: ["new", "sale"],
+      stock: 20,
+    },
+    {
+      id: 5,
+      name: "Watch",
+      price: 199.99,
+      img_url:
+        "https://image.hm.com/assets/hm/52/2c/522c4003b164b188cc3268639d62078cc68790ff.jpg",
+      description: "A sleek wristwatch.",
+      category: "Accessories",
+      tags: ["new", "sale"],
+      stock: 15,
+    },
+    {
+      id: 6,
+      name: "Hat",
+      price: 19.99,
+      img_url:
+        "https://image.hm.com/assets/hm/52/2c/522c4003b164b188cc3268639d62078cc68790ff.jpg",
+      description: "A stylish hat for all seasons.",
+      category: "Accessories",
+      tags: ["new", "sale"],
+      stock: 40,
+    }
+  ];
 
 const APP_CONSTANTS = {
   APP_TITLE,
@@ -45,9 +140,14 @@ const APP_CONSTANTS = {
   NOT_FOUND,
 
   ADD_CART_LABEL,
+  VIEW_PRODUCT_LABEL,
   HOME_BANNER_URLS,
   FOOTER_DESCRIPTION,
-  FOOTER_LINKS
+  FOOTER_LINKS,
+  category,
+  products,
 };
+
+
 
 export default APP_CONSTANTS;
