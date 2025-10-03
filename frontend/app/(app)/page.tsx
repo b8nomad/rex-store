@@ -1,8 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import APP_CONSTANTS from "@/app/constants/labels";
+import Image from "next/image";
 
 import { Carousel } from "@/components/app/carousel";
+import { Button } from "@/components/ui/button";
 
 const page = () => {
   const category = [
@@ -96,40 +98,42 @@ const page = () => {
       <div className="w-full relative overflow-hidden">
         <Carousel images={APP_CONSTANTS.HOME_BANNER_URLS} />
       </div>
-      <div className="w-full max-w-[80%] mt-10">
-        <h1 className="text-3xl font-bold mb-6">Shop by Category</h1>
-        <div className="flex flex-wrap gap-[10%] justify-start">
+      <div className="w-full mt-10 flex flex-col items-center">
+        <h1 className="text-3xl font-bold mb-6 text-center">shop by category</h1>
+        <div className="w-full flex flex-wrap justify-center gap-10">
           {category.map((cat) => (
-            <div key={cat.id} className="flex flex-col items-center">
-              <img
-                src={cat.image_url}
-                alt={cat.name}
-                className="w-32 h-32 object-cover rounded-full border-2 border-gray-200"
-              />
-              <h2 className="mt-4 text-lg font-semibold">{cat.name}</h2>
-            </div>
+        <div key={cat.id} className="flex flex-col items-center mb-10">
+          <img
+            src={cat.image_url}
+            alt={cat.name}
+            className="w-32 h-32 object-cover rounded-full border-2 border-gray-200"
+          />
+          <h2 className="mt-4 text-lg font-semibold text-center">{cat.name}</h2>
+        </div>
           ))}
         </div>
       </div>
-      <div className="w-full max-w-[80%] mt-20 mb-10">
-        <h1 className="text-3xl font-bold mb-6">featured products</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="w-full mt-20 mb-10 flex flex-col items-center">
+        <h1 className="text-3xl font-bold mb-6 text-center">featured products</h1>
+        <div className="w-full flex flex-wrap justify-center gap-8">
           {products.map((product) => (
-            <div
-              key={product.id}
-              className="border rounded-lg p-4 flex flex-col"
-            >
-              <img
-                src={product.img_url}
-                alt={product.name}
-                className="w-full h-48 object-cover mb-4 rounded"
-              />
-              <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
-              <p className="text-gray-600 mb-4">${product.price.toFixed(2)}</p>
-              <button className="mt-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">
-                Add to Cart
-              </button>
-            </div>
+        <div
+          key={product.id}
+          className="border rounded-lg p-4 flex flex-col items-center w-[250px] bg-white"
+        >
+          <Image
+            src={product.img_url}
+            alt={product.name}
+            className="w-full h-48 object-cover mb-4 rounded"
+            width={200}
+            height={200}
+          />
+          <h2 className="text-lg font-semibold mb-2 text-center">{product.name}</h2>
+          <p className="text-gray-600 mb-4 text-center">${product.price.toFixed(2)}</p>
+          <Button>
+            {APP_CONSTANTS.ADD_CART_LABEL}
+          </Button>
+        </div>
           ))}
         </div>
       </div>
