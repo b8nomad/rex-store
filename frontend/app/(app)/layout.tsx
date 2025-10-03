@@ -1,3 +1,4 @@
+import Footer from "@/components/app/footer";
 import Navigation from "@/components/app/navigation";
 
 export default function Layout({
@@ -13,6 +14,7 @@ export default function Layout({
                         {children}
                 </div>
             </div>
+            <Footer />
         </main>
     );
 }

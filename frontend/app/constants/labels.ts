@@ -24,6 +24,17 @@ const HOME_BANNER_URLS = [
   "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/grocery-sale-retail-or-e-commerce-banner-ad-design-template-67720435bb809be27f46dfb1dd44c6fa_screen.jpg?ts=1606113265"
 ]
 
+const FOOTER_DESCRIPTION = "rex-store is your one-stop shop for the latest fashion trends. We offer a wide range of clothing, accessories, and footwear.";
+
+const FOOTER_LINKS = [
+  { title: "home", url: "/", require_auth: false },
+  { title: "products", url: "/products", require_auth: false },
+  { title: "orders", url: "/orders", require_auth: true },
+  { title: "account", url: "/account", require_auth: true },
+  { title: "privacy policy", url: "/privacy-policy", require_auth: false },
+  { title: "tos", url: "/terms-of-service", require_auth: false },
+]
+const ADD_CART_LABEL = "add to cart";
 const CHECKOUT_LABEL = "proceed to checkout";
 
 const APP_CONSTANTS = {
@@ -33,6 +44,10 @@ const APP_CONSTANTS = {
   PAGE_LABELS,
   NOT_FOUND,
 
-  HOME_BANNER_URLS};
+  ADD_CART_LABEL,
+  HOME_BANNER_URLS,
+  FOOTER_DESCRIPTION,
+  FOOTER_LINKS
+};
 
 export default APP_CONSTANTS;
